@@ -23,10 +23,10 @@ namespace Test_Vector
             HidePanelOnLoad();
             RestFields();
             shapes = new List<DrawShape>();
-            LoadDataUsingParser();
+            LoadDataFromDataSource();
         }
 
-        private void LoadDataUsingParser()
+        private void LoadDataFromDataSource()
         {
             try
             {
@@ -94,7 +94,6 @@ namespace Test_Vector
             try
             {
                 //for display purpose i have handle it for one specific type only for simplicity.  
-
 
                 var showShapeData = shapeObjects.FirstOrDefault();
                 lblColorValue.Text = showShapeData.Color;

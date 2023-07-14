@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Vector.Models
 {
-    public  enum DataSourceType
+    public enum DataSourceType
     {
         json,
         xml

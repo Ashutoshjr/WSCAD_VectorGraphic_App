@@ -18,7 +18,6 @@ namespace Test_Vector.Models
 
         public string SetShapeData(DrawShape drawShape)
         {
-         
             A = drawShape.A;
             B = drawShape.B;
             C = drawShape.C;

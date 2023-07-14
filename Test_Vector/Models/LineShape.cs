@@ -12,18 +12,14 @@ namespace Test_Vector.Models
 
         public string B { get; set; }
 
-
         public LineShape(){ }
-
 
         public string SetShapeData(DrawShape drawShape)
         {
-          
             A = drawShape.A;
             B = drawShape.B;
 
             return $"{A} - {B}";
-
         }
 
         public string SetShapeFilledData(DrawShape drawShape)
