@@ -33,10 +33,11 @@ namespace Test_Vector
                 string fileName = ConfigurationManager.AppSettings[nameof(fileName)];
                 string fileType = ConfigurationManager.AppSettings[nameof(fileType)];
 
-                string dataFolderPath = Path.Combine(Application.StartupPath, "File");
+                string dataFolderPath = "File";
                 string filePath = Path.Combine(dataFolderPath, fileName);
 
-                var parser = ParserFactory.CreateParser(fileType, filePath);
+                var shapeType = (DataSourceType)Enum.Parse(typeof(DataSourceType), fileType, true);
+                var parser = ParserFactory.CreateParser(shapeType, filePath);
                 shapes = parser.Parse();
                 shapes.Insert(0, new DrawShape { Type = "Please Select" });
                 comboBox1.DataSource = shapes;

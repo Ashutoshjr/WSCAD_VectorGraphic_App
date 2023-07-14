@@ -88,6 +88,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CircleShape.cs" />
+    <Compile Include="Models\DataSourceType.cs" />
     <Compile Include="Models\DrawShape.cs" />
     <Compile Include="Models\IShape.cs" />
     <Compile Include="Models\LineShape.cs" />
@@ -117,7 +118,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="File\ShapeData.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
