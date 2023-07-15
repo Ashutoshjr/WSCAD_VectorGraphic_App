@@ -92,7 +92,8 @@
     <Compile Include="Models\DrawShape.cs" />
     <Compile Include="Models\IShape.cs" />
     <Compile Include="Models\LineShape.cs" />
-    <Compile Include="Models\Shape.cs" />
+    <Compile Include="Models\BaseShape.cs" />
+    <Compile Include="Models\ShapeDetials.cs" />
     <Compile Include="Models\ShapeType.cs" />
     <Compile Include="Models\TriangleShape.cs" />
     <Compile Include="Parsers\JsonParser.cs" />

@@ -26,7 +26,7 @@ namespace Test_Vector
            };
         }
 
-        public static void DrawShapes(IEnumerable<DrawShape> shapes, Graphics graphics)
+        public static void DrawShapes(IEnumerable<DrawShape> shapes, Graphics graphics, WindowsFormDetail windowsFormDetail)
         {
             foreach (var shape in shapes)
             {
@@ -45,7 +45,7 @@ namespace Test_Vector
 
                     if (drawingStrategies.TryGetValue(shapeType, out var drawingStrategy))
                     {
-                        drawingStrategy.DrawShape(shape, graphics, shapeColor);
+                        drawingStrategy.DrawShape(shape, graphics, shapeColor, windowsFormDetail);
                     }
                     else
                     {
@@ -54,7 +54,6 @@ namespace Test_Vector
                 }
                 catch (Exception ex)
                 {
-
                     throw;
                 }
             }

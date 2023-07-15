@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Vector.Models
 {
-    public abstract class Shape
+    public abstract class BaseShape
     {
         public string Type { get; set; }
         public string Color { get; set; }

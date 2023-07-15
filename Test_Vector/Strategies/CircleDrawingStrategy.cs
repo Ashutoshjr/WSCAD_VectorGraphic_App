@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Test_Vector.Helpers;
 using Test_Vector.Models;
 
@@ -11,15 +12,19 @@ namespace Test_Vector.Strategies
 {
     public class CircleDrawingStrategy : IShapeDrawingStrategy
     {
-        public void DrawShape(DrawShape shape, Graphics graphics, Color color)
+        public void DrawShape(DrawShape shape, Graphics graphics, Color color, WindowsFormDetail windowsFormDetail)
         {
             try
             {
                 Point center = Utility.ParseCoordinates(shape.Center);
                 float radius = Convert.ToSingle(shape.Radius);
 
-                int circleRadius = Convert.ToInt32(shape.Radius);
-                Rectangle bounds = new Rectangle(circleRadius - center.X, circleRadius - center.Y, circleRadius * 6, circleRadius * 6);
+                int circleRadius;
+                Point circleCenter;
+                Utility.GetCirclePoints(shape, center, windowsFormDetail, out circleRadius, out circleCenter);
+
+
+                Rectangle bounds = new Rectangle(circleCenter.X - circleRadius, circleCenter.Y - circleRadius, circleRadius * 6, circleRadius * 6);
 
                 if (shape.Filled)
                 {

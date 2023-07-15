@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test_Vector.Models;
 
 namespace Test_Vector.Helpers
 {
@@ -42,6 +43,16 @@ namespace Test_Vector.Helpers
 
                 throw;
             }
+        }
+
+
+        public static void GetCirclePoints(DrawShape shape, Point center, WindowsFormDetail windowsFormDetail, out int circleRadius, out Point circleCenter)
+        {
+            circleRadius = (int)(shape.Radius * (float)windowsFormDetail.FloatingWidth / windowsFormDetail.OriginalWidth);
+            Point pictureCenter = new Point(windowsFormDetail.PictureBoxWidth / 2, windowsFormDetail.PictureBoxHeight / 2);
+
+            circleCenter = new Point(pictureCenter.X + (int)(center.X * (float)windowsFormDetail.FloatingWidth / windowsFormDetail.OriginalWidth),
+                                           pictureCenter.Y + (int)(center.Y * (float)windowsFormDetail.FloatingHeight / windowsFormDetail.OriginalHeight));
         }
     }
 }

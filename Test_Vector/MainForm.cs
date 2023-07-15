@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Test_Vector.Factory;
+using Test_Vector.Helpers;
 using Test_Vector.Models;
 using Test_Vector.Parsers;
 
@@ -16,14 +17,37 @@ namespace Test_Vector
     public partial class MainForm : Form
     {
         private List<DrawShape> shapes;
+        private WindowsFormDetail windowsFormDetail;
+        private DrawShape selectedShape;
+        private Graphics graphicObj;
+        private int originalWindowWidth;
+        private int originalWindowHeight;
+
 
         public MainForm()
         {
             InitializeComponent();
+
+            this.Resize += MainForm_Resize;
+
             HidePanelOnLoad();
             RestFields();
             shapes = new List<DrawShape>();
             LoadDataFromDataSource();
+            windowsFormDetail = new WindowsFormDetail()
+            {
+                OriginalWidth = this.Width,
+                OriginalHeight = this.Height,
+                PictureBoxWidth = pictureBox1.Width,
+                PictureBoxHeight = pictureBox1.Height,
+                FloatingHeight = this.Height,
+                FloatingWidth = this.Width,
+            };
+
+            originalWindowWidth = this.Width;
+            originalWindowHeight = this.Height;
+
+            graphicObj = pictureBox1.CreateGraphics();
         }
 
         private void LoadDataFromDataSource()
@@ -54,15 +78,34 @@ namespace Test_Vector
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pictureBox1.Refresh();
-            var selectedShape = (DrawShape)comboBox1.SelectedItem;
             var graphics = pictureBox1.CreateGraphics();
 
+            try
+            {
+                selectedShape = (DrawShape)comboBox1.SelectedItem;
+                if (windowsFormDetail != null && graphicObj != null)
+                {
+                    DrawShape(selectedShape, graphics, windowsFormDetail);
+                }
+            }
+            catch (Exception ex)
+            {
+                lblErrorMessage.Text = ex.Message;
+            }
+            finally
+            {
+                graphics?.Dispose();
+            }
+        }
+
+        private void DrawShape(DrawShape selectedShape, Graphics graphics, WindowsFormDetail windowsFormDetail)
+        {
             if (Enum.TryParse(selectedShape.Type, out ShapeType shapeType))
             {
                 try
                 {
                     var shapeObjects = shapes.Where(shape => shape.Type == shapeType.ToString()).ToList();
-                    ShapeDrawer.DrawShapes(shapeObjects, graphics);
+                    ShapeDrawer.DrawShapes(shapeObjects, graphics, windowsFormDetail);
 
                     BindShapeData(shapeObjects);
 
@@ -77,9 +120,6 @@ namespace Test_Vector
             {
                 DetailPanel.Hide();
             }
-
-            graphics.Dispose();
-
         }
 
 
@@ -107,8 +147,44 @@ namespace Test_Vector
             }
             catch (Exception ex)
             {
-
                 lblErrorMessage.Text = ex.Message;
+            }
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            originalWindowWidth = this.Width;
+        }
+
+        private void pictureBox1_Resize(object sender, EventArgs e)
+        {
+            RedrawShapes();
+        }
+
+        private void RedrawShapes()
+        {
+            pictureBox1.Refresh();
+            Graphics graphics = pictureBox1.CreateGraphics();
+
+            if (shapes != null)
+            {
+                try
+                {
+                    windowsFormDetail.PictureBoxWidth = pictureBox1.Width;
+                    windowsFormDetail.PictureBoxHeight = pictureBox1.Height;
+                    windowsFormDetail.FloatingWidth = this.Width;
+                    windowsFormDetail.FloatingHeight = this.Height;
+
+                    DrawShape(selectedShape, graphics, windowsFormDetail);
+                }
+                catch (Exception ex)
+                {
+                    lblErrorMessage.Text = ex.Message;
+                }
+                finally
+                {
+                    graphics?.Dispose();
+                }
             }
         }
 
@@ -124,6 +200,5 @@ namespace Test_Vector
             lblColorValue.Text = string.Empty;
             lblCoordinateValue.Text = string.Empty;
         }
-
     }
 }

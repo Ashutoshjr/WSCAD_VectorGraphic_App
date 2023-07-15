@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Vector.Models
 {
-    public class DrawShape : Shape
+    public class DrawShape : BaseShape
     {
         public string A { get; set; }
         public string B { get; set; }

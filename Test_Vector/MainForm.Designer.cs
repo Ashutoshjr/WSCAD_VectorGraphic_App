@@ -48,7 +48,7 @@
             // lblErrorMessage
             // 
             this.lblErrorMessage.AutoSize = true;
-            this.lblErrorMessage.Location = new System.Drawing.Point(16, 486);
+            this.lblErrorMessage.Location = new System.Drawing.Point(16, 738);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(92, 16);
             this.lblErrorMessage.TabIndex = 6;
@@ -58,7 +58,7 @@
             // 
             this.lblColor.AutoSize = true;
             this.lblColor.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColor.Location = new System.Drawing.Point(50, 28);
+            this.lblColor.Location = new System.Drawing.Point(50, 18);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(138, 23);
             this.lblColor.TabIndex = 7;
@@ -68,7 +68,7 @@
             // 
             this.lblColorValue.AutoSize = true;
             this.lblColorValue.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColorValue.Location = new System.Drawing.Point(217, 28);
+            this.lblColorValue.Location = new System.Drawing.Point(217, 18);
             this.lblColorValue.Name = "lblColorValue";
             this.lblColorValue.Size = new System.Drawing.Size(52, 23);
             this.lblColorValue.TabIndex = 8;
@@ -78,7 +78,7 @@
             // 
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.Location = new System.Drawing.Point(49, 71);
+            this.lblType.Location = new System.Drawing.Point(50, 52);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(139, 23);
             this.lblType.TabIndex = 9;
@@ -88,7 +88,7 @@
             // 
             this.lblTypeValue.AutoSize = true;
             this.lblTypeValue.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeValue.Location = new System.Drawing.Point(223, 71);
+            this.lblTypeValue.Location = new System.Drawing.Point(217, 52);
             this.lblTypeValue.Name = "lblTypeValue";
             this.lblTypeValue.Size = new System.Drawing.Size(46, 23);
             this.lblTypeValue.TabIndex = 10;
@@ -98,7 +98,7 @@
             // 
             this.lblCoordinates.AutoSize = true;
             this.lblCoordinates.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoordinates.Location = new System.Drawing.Point(49, 117);
+            this.lblCoordinates.Location = new System.Drawing.Point(49, 90);
             this.lblCoordinates.Name = "lblCoordinates";
             this.lblCoordinates.Size = new System.Drawing.Size(137, 23);
             this.lblCoordinates.TabIndex = 11;
@@ -108,7 +108,7 @@
             // 
             this.lblCoordinateValue.AutoSize = true;
             this.lblCoordinateValue.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoordinateValue.Location = new System.Drawing.Point(217, 117);
+            this.lblCoordinateValue.Location = new System.Drawing.Point(217, 90);
             this.lblCoordinateValue.Name = "lblCoordinateValue";
             this.lblCoordinateValue.Size = new System.Drawing.Size(98, 23);
             this.lblCoordinateValue.TabIndex = 12;
@@ -125,16 +125,16 @@
             this.DetailPanel.Controls.Add(this.lblCoordinates);
             this.DetailPanel.Controls.Add(this.lblType);
             this.DetailPanel.Controls.Add(this.lblTypeValue);
-            this.DetailPanel.Location = new System.Drawing.Point(436, 132);
+            this.DetailPanel.Location = new System.Drawing.Point(537, 12);
             this.DetailPanel.Name = "DetailPanel";
-            this.DetailPanel.Size = new System.Drawing.Size(499, 282);
+            this.DetailPanel.Size = new System.Drawing.Size(463, 172);
             this.DetailPanel.TabIndex = 13;
             // 
             // lblFilledValue
             // 
             this.lblFilledValue.AutoSize = true;
             this.lblFilledValue.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilledValue.Location = new System.Drawing.Point(217, 168);
+            this.lblFilledValue.Location = new System.Drawing.Point(217, 126);
             this.lblFilledValue.Name = "lblFilledValue";
             this.lblFilledValue.Size = new System.Drawing.Size(52, 23);
             this.lblFilledValue.TabIndex = 14;
@@ -144,7 +144,7 @@
             // 
             this.lblFilled.AutoSize = true;
             this.lblFilled.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilled.Location = new System.Drawing.Point(50, 168);
+            this.lblFilled.Location = new System.Drawing.Point(50, 126);
             this.lblFilled.Name = "lblFilled";
             this.lblFilled.Size = new System.Drawing.Size(134, 23);
             this.lblFilled.TabIndex = 13;
@@ -152,12 +152,16 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 132);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 209);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(411, 282);
+            this.pictureBox1.Size = new System.Drawing.Size(961, 449);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Resize += new System.EventHandler(this.pictureBox1_Resize);
             // 
             // comboBox1
             // 
@@ -187,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(947, 546);
+            this.ClientSize = new System.Drawing.Size(1030, 780);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
@@ -195,6 +199,7 @@
             this.Controls.Add(this.lblErrorMessage);
             this.Name = "MainForm";
             this.Text = "Vector Graphic";
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.DetailPanel.ResumeLayout(false);
             this.DetailPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

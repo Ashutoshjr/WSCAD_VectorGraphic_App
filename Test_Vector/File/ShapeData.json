@@ -7,8 +7,8 @@
   },
   {
     "type": "circle",
-    "center": "5; 0",
-    "radius": 17.0,
+    "center": "0; 0",
+    "radius": 20,
     "filled": true,
     "color": "127; 255; 0; 0"
   },
