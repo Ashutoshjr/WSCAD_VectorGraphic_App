@@ -20,10 +20,7 @@ namespace Test_Vector
         private WindowsFormDetail windowsFormDetail;
         private DrawShape selectedShape;
         private Graphics graphicObj;
-        private int originalWindowWidth;
-        private int originalWindowHeight;
-
-
+ 
         public MainForm()
         {
             InitializeComponent();
@@ -43,9 +40,6 @@ namespace Test_Vector
                 FloatingHeight = this.Height,
                 FloatingWidth = this.Width,
             };
-
-            originalWindowWidth = this.Width;
-            originalWindowHeight = this.Height;
 
             graphicObj = pictureBox1.CreateGraphics();
         }
@@ -153,7 +147,7 @@ namespace Test_Vector
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            originalWindowWidth = this.Width;
+         
         }
 
         private void pictureBox1_Resize(object sender, EventArgs e)
