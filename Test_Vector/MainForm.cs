@@ -20,7 +20,7 @@ namespace Test_Vector
         private WindowsFormDetail windowsFormDetail;
         private DrawShape selectedShape;
         private Graphics graphicObj;
- 
+
         public MainForm()
         {
             InitializeComponent();
@@ -98,8 +98,11 @@ namespace Test_Vector
             {
                 try
                 {
+                    var shapeToBeDraw = ShapeDrawingFactory.CreateShapeObj(shapeType);
+                    var shapeDrawer = new ShapeDrawer(shapeToBeDraw);
+
                     var shapeObjects = shapes.Where(shape => shape.Type == shapeType.ToString()).ToList();
-                    ShapeDrawer.DrawShapes(shapeObjects, graphics, windowsFormDetail);
+                    shapeDrawer.DrawShape(shapeObjects, graphics, windowsFormDetail);
 
                     BindShapeData(shapeObjects);
 
@@ -147,7 +150,7 @@ namespace Test_Vector
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-         
+
         }
 
         private void pictureBox1_Resize(object sender, EventArgs e)

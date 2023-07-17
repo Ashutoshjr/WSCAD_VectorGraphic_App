@@ -10,6 +10,7 @@ namespace Test_Vector.Strategies
 {
     public interface IShapeDrawingStrategy
     {
-        void DrawShape(DrawShape shape, Graphics graphics, Color color,WindowsFormDetail windowsFormDetail);
+        void DrawShape(DrawShape shape, Graphics graphics, Color color, WindowsFormDetail windowsFormDetail);
+
     }
 }

@@ -37,7 +37,7 @@ namespace Test_Vector.Strategies
 
         }
 
-
+       
         private Point[] GetScaledTrianglePoints(Point pointA, Point pointB, Point pointC, WindowsFormDetail windowsFormDetail)
         {
             Point pictureCenter = new Point(windowsFormDetail.PictureBoxWidth / 2, windowsFormDetail.PictureBoxHeight / 2);

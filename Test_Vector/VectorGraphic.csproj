@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Factory\ParserFactory.cs" />
     <Compile Include="Factory\ShapeDataFactory.cs" />
+    <Compile Include="Factory\ShapeDrawingFactory.cs" />
     <Compile Include="Helpers\Utility.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -87,15 +88,15 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\CircleShape.cs" />
-    <Compile Include="Models\DataSourceType.cs" />
-    <Compile Include="Models\DrawShape.cs" />
-    <Compile Include="Models\IShape.cs" />
-    <Compile Include="Models\LineShape.cs" />
-    <Compile Include="Models\BaseShape.cs" />
-    <Compile Include="Models\ShapeDetials.cs" />
-    <Compile Include="Models\ShapeType.cs" />
-    <Compile Include="Models\TriangleShape.cs" />
+    <Compile Include="Models\ShapeBindingsTypes\CircleShape.cs" />
+    <Compile Include="Models\CommonTypes\DataSourceType.cs" />
+    <Compile Include="Models\ShapeDrawingTypes\DrawShape.cs" />
+    <Compile Include="Models\ShapeBindingsTypes\IShape.cs" />
+    <Compile Include="Models\ShapeBindingsTypes\LineShape.cs" />
+    <Compile Include="Models\ShapeDrawingTypes\BaseShape.cs" />
+    <Compile Include="Models\CommonTypes\ShapeDetials.cs" />
+    <Compile Include="Models\CommonTypes\ShapeType.cs" />
+    <Compile Include="Models\ShapeBindingsTypes\TriangleShape.cs" />
     <Compile Include="Parsers\JsonParser.cs" />
     <Compile Include="Parsers\ParserBase.cs" />
     <Compile Include="Parsers\XmlParser.cs" />
