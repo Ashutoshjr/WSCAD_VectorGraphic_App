@@ -108,6 +108,7 @@ namespace Test_Vector
                 catch (Exception ex)
                 {
                     lblErrorMessage.Text = ex.Message;
+                    DetailPanel.Hide();
                 }
             }
             else
