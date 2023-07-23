@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using Test_Vector.Helpers;
 using Test_Vector.Models;
 
 namespace Test_Vector.Strategies
 {
-    internal class LineDrawingStrategy : IShapeDrawingStrategy
+    internal class LineDrawing : IShapeDrawing
     {
         public void DrawShape(DrawShape shape, Graphics graphics, Color color, WindowsFormDetail windowsFormDetail)
         {

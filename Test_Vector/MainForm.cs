@@ -66,6 +66,7 @@ namespace Test_Vector
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblErrorMessage.Text = string.Empty;
             pictureBox1.Refresh();
             var graphics = pictureBox1.CreateGraphics();
 
@@ -79,7 +80,7 @@ namespace Test_Vector
             }
             catch (Exception ex)
             {
-                lblErrorMessage.Text = ex.Message;
+                lblErrorMessage.Text = "An error occurred while processing the selected shape. Please try again.";
             }
             finally
             {
@@ -111,6 +112,7 @@ namespace Test_Vector
             }
             else
             {
+                lblErrorMessage.Text = "Selected type is not present";
                 DetailPanel.Hide();
                 lblShapeDetails.Hide();
             }
@@ -141,7 +143,7 @@ namespace Test_Vector
             }
             catch (Exception ex)
             {
-                lblErrorMessage.Text = ex.Message;
+                lblErrorMessage.Text = "An error occurred while binding shape data. Please try again.";
             }
         }
 
@@ -160,6 +162,7 @@ namespace Test_Vector
             pictureBox1.Refresh();
             Graphics graphics = pictureBox1.CreateGraphics();
 
+
             if (shapes != null)
             {
                 try
@@ -173,12 +176,17 @@ namespace Test_Vector
                 }
                 catch (Exception ex)
                 {
-                    lblErrorMessage.Text = ex.Message;
+                    lblErrorMessage.Text = "An error occurred while redrawing shapes. Please try again.";
                 }
                 finally
                 {
                     graphics?.Dispose();
                 }
+            }
+            else
+            {
+                lblErrorMessage.Text = "No shape data available.";
+                return;
             }
         }
 

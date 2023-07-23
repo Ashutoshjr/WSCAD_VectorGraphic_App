@@ -10,9 +10,9 @@ namespace Test_Vector
     public class ShapeDrawer
     {
         private static Dictionary<string, Color> shapeColors = new Dictionary<string, Color>();
-        private readonly IShapeDrawingStrategy _shapeDrawingStrategy;
+        private readonly IShapeDrawing _shapeDrawingStrategy;
 
-        public ShapeDrawer(IShapeDrawingStrategy shapeDrawingStrategy)
+        public ShapeDrawer(IShapeDrawing shapeDrawingStrategy)
         {
             _shapeDrawingStrategy = shapeDrawingStrategy;
         }

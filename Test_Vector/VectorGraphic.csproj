@@ -103,10 +103,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShapeDrawer.cs" />
-    <Compile Include="Strategies\CircleDrawingStrategy.cs" />
-    <Compile Include="Strategies\IShapeDrawingStrategy.cs" />
-    <Compile Include="Strategies\LineDrawingStrategy.cs" />
-    <Compile Include="Strategies\TriangleDrawingStrategy.cs" />
+    <Compile Include="DrawingStrategies\CircleDrawing.cs" />
+    <Compile Include="DrawingStrategies\IShapeDrawing.cs" />
+    <Compile Include="DrawingStrategies\LineDrawing.cs" />
+    <Compile Include="DrawingStrategies\TriangleDrawing.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

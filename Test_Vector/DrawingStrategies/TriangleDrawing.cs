@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Drawing;
 using Test_Vector.Helpers;
 using Test_Vector.Models;
 
 namespace Test_Vector.Strategies
 {
-    public class TriangleDrawingStrategy : IShapeDrawingStrategy
+    public class TriangleDrawing : IShapeDrawing
     {
         public void DrawShape(DrawShape shape, Graphics graphics, Color color, WindowsFormDetail windowsFormDetail)
         {
@@ -37,7 +31,7 @@ namespace Test_Vector.Strategies
 
         }
 
-       
+
         private Point[] GetScaledTrianglePoints(Point pointA, Point pointB, Point pointC, WindowsFormDetail windowsFormDetail)
         {
             Point pictureCenter = new Point(windowsFormDetail.PictureBoxWidth / 2, windowsFormDetail.PictureBoxHeight / 2);

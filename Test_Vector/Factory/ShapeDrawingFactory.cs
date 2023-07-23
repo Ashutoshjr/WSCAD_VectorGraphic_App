@@ -12,17 +12,17 @@ namespace Test_Vector.Factory
     public static class ShapeDrawingFactory
     {
 
-        private static readonly Dictionary<ShapeType, Func<IShapeDrawingStrategy>> shapeDrawingObjCreators = new Dictionary<ShapeType, Func<IShapeDrawingStrategy>>()
+        private static readonly Dictionary<ShapeType, Func<IShapeDrawing>> shapeDrawingObjCreators = new Dictionary<ShapeType, Func<IShapeDrawing>>()
         {
-            { ShapeType.line, () => new LineDrawingStrategy() },
-            { ShapeType.circle, () => new CircleDrawingStrategy() },
-            { ShapeType.triangle, () => new TriangleDrawingStrategy() },
+            { ShapeType.line, () => new LineDrawing() },
+            { ShapeType.circle, () => new CircleDrawing() },
+            { ShapeType.triangle, () => new TriangleDrawing() },
 
             // Add creators for future parsers here
         };
 
 
-        public static IShapeDrawingStrategy CreateShapeObj(ShapeType type)
+        public static IShapeDrawing CreateShapeObj(ShapeType type)
         {
             if (shapeDrawingObjCreators.TryGetValue(type, out var shapeDataCreator))
             {

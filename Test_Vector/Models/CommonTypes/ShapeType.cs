@@ -4,6 +4,7 @@
     {
         line,
         circle,
-        triangle
+        triangle,
+        rectangle
     }
 }

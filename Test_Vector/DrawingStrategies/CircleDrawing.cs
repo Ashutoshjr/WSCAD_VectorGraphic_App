@@ -5,7 +5,7 @@ using Test_Vector.Models;
 
 namespace Test_Vector.Strategies
 {
-    public class CircleDrawingStrategy : IShapeDrawingStrategy
+    public class CircleDrawing : IShapeDrawing
     {
         public void DrawShape(DrawShape shape, Graphics graphics, Color color, WindowsFormDetail windowsFormDetail)
         {
