@@ -41,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblShapeDetails = new System.Windows.Forms.Label();
             this.DetailPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             // lblErrorMessage
             // 
             this.lblErrorMessage.AutoSize = true;
-            this.lblErrorMessage.Location = new System.Drawing.Point(16, 738);
+            this.lblErrorMessage.Location = new System.Drawing.Point(106, 287);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(92, 16);
             this.lblErrorMessage.TabIndex = 6;
@@ -125,9 +126,9 @@
             this.DetailPanel.Controls.Add(this.lblCoordinates);
             this.DetailPanel.Controls.Add(this.lblType);
             this.DetailPanel.Controls.Add(this.lblTypeValue);
-            this.DetailPanel.Location = new System.Drawing.Point(537, 12);
+            this.DetailPanel.Location = new System.Drawing.Point(434, 91);
             this.DetailPanel.Name = "DetailPanel";
-            this.DetailPanel.Size = new System.Drawing.Size(463, 172);
+            this.DetailPanel.Size = new System.Drawing.Size(471, 175);
             this.DetailPanel.TabIndex = 13;
             // 
             // lblFilledValue
@@ -146,9 +147,9 @@
             this.lblFilled.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFilled.Location = new System.Drawing.Point(50, 126);
             this.lblFilled.Name = "lblFilled";
-            this.lblFilled.Size = new System.Drawing.Size(134, 23);
+            this.lblFilled.Size = new System.Drawing.Size(139, 23);
             this.lblFilled.TabIndex = 13;
-            this.lblFilled.Text = "Filled               :";
+            this.lblFilled.Text = "Filled                :";
             // 
             // pictureBox1
             // 
@@ -156,9 +157,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 209);
+            this.pictureBox1.Location = new System.Drawing.Point(109, 332);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(961, 449);
+            this.pictureBox1.Size = new System.Drawing.Size(796, 415);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Resize += new System.EventHandler(this.pictureBox1_Resize);
@@ -170,7 +171,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Select Shapes"});
-            this.comboBox1.Location = new System.Drawing.Point(289, 30);
+            this.comboBox1.Location = new System.Drawing.Point(109, 104);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(193, 28);
             this.comboBox1.TabIndex = 16;
@@ -180,11 +181,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Eras Demi ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 39);
             this.label1.TabIndex = 17;
             this.label1.Text = "Shape Drawer";
+            // 
+            // lblShapeDetails
+            // 
+            this.lblShapeDetails.AutoSize = true;
+            this.lblShapeDetails.Font = new System.Drawing.Font("Eras Demi ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShapeDetails.Location = new System.Drawing.Point(591, 59);
+            this.lblShapeDetails.Name = "lblShapeDetails";
+            this.lblShapeDetails.Size = new System.Drawing.Size(173, 29);
+            this.lblShapeDetails.TabIndex = 18;
+            this.lblShapeDetails.Text = "Shape Details";
             // 
             // MainForm
             // 
@@ -192,6 +203,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1030, 780);
+            this.Controls.Add(this.lblShapeDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
@@ -222,6 +234,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFilledValue;
         private System.Windows.Forms.Label lblFilled;
+        private System.Windows.Forms.Label lblShapeDetails;
     }
 }
 

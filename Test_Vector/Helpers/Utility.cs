@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Test_Vector.Models;
 
 namespace Test_Vector.Helpers
 {
     public class Utility
     {
+
+        public static string NotApplicable = "NA";
+
         public static Point ParseCoordinates(string coordinates)
         {
             try

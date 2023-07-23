@@ -94,7 +94,7 @@
     <Compile Include="Models\ShapeBindingsTypes\IShape.cs" />
     <Compile Include="Models\ShapeBindingsTypes\LineShape.cs" />
     <Compile Include="Models\ShapeDrawingTypes\BaseShape.cs" />
-    <Compile Include="Models\CommonTypes\ShapeDetials.cs" />
+    <Compile Include="Models\CommonTypes\ShapeDetails.cs" />
     <Compile Include="Models\CommonTypes\ShapeType.cs" />
     <Compile Include="Models\ShapeBindingsTypes\TriangleShape.cs" />
     <Compile Include="Parsers\JsonParser.cs" />

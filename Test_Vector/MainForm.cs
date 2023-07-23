@@ -23,7 +23,7 @@ namespace Test_Vector
             InitializeComponent();
 
             this.Resize += MainForm_Resize;
-
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             HidePanelOnLoad();
             RestFields();
             shapes = new List<DrawShape>();
@@ -54,7 +54,7 @@ namespace Test_Vector
                 shapes = parser.Parse();
                 shapes.Insert(0, new DrawShape { Type = "Please Select" });
                 comboBox1.DataSource = shapes;
-                comboBox1.DisplayMember = "Type";
+                comboBox1.DisplayMember = "FormattedType";
                 comboBox1.ValueMember = "Type";
 
             }
@@ -89,7 +89,7 @@ namespace Test_Vector
 
         private void DrawShape(DrawShape selectedShape, Graphics graphics, WindowsFormDetail windowsFormDetail)
         {
-            if (Enum.TryParse(selectedShape.Type, out ShapeType shapeType))
+            if (Enum.TryParse(selectedShape.Type, true, out ShapeType shapeType))
             {
                 try
                 {
@@ -102,6 +102,7 @@ namespace Test_Vector
                     BindShapeData(shapeObjects);
 
                     DetailPanel.Show();
+                    lblShapeDetails.Show();
                 }
                 catch (Exception ex)
                 {
@@ -111,6 +112,7 @@ namespace Test_Vector
             else
             {
                 DetailPanel.Hide();
+                lblShapeDetails.Hide();
             }
         }
 
@@ -129,7 +131,7 @@ namespace Test_Vector
 
                 var showShapeData = shapeObjects.FirstOrDefault();
                 lblColorValue.Text = showShapeData.Color;
-                lblTypeValue.Text = showShapeData.Type;
+                lblTypeValue.Text = showShapeData.FormattedType;
 
                 var shapeType = (ShapeType)Enum.Parse(typeof(ShapeType), showShapeData.Type, true);
                 var shapeData = ShapeDataFactory.CreateShape(shapeType);
@@ -183,6 +185,8 @@ namespace Test_Vector
         private void HidePanelOnLoad()
         {
             DetailPanel.Hide();
+            lblShapeDetails.Hide();
+
         }
 
         private void RestFields()

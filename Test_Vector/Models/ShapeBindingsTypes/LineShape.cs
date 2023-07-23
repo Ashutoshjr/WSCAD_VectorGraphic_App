@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Test_Vector.Helpers;
 
 namespace Test_Vector.Models
 {
@@ -12,7 +8,7 @@ namespace Test_Vector.Models
 
         public string B { get; set; }
 
-        public LineShape(){ }
+        public LineShape() { }
 
         public string SetShapeData(DrawShape drawShape)
         {
@@ -24,7 +20,7 @@ namespace Test_Vector.Models
 
         public string SetShapeFilledData(DrawShape drawShape)
         {
-            return "NA";
+            return Utility.NotApplicable;
         }
     }
 }
