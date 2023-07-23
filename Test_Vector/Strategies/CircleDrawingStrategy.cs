@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Test_Vector.Helpers;
 using Test_Vector.Models;
 
@@ -34,7 +29,7 @@ namespace Test_Vector.Strategies
                     }
                 }
 
-                using (Pen pen = new Pen(color,1))
+                using (Pen pen = new Pen(color, 1))
                 {
                     graphics.DrawEllipse(pen, bounds);
                 }

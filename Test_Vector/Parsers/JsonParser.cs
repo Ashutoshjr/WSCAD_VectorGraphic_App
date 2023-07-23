@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using Test_Vector.Models;
 
 namespace Test_Vector.Parsers
@@ -14,7 +10,7 @@ namespace Test_Vector.Parsers
     {
         public JsonParser(string filePath) : base(filePath)
         {
-            
+
         }
 
         private static readonly JsonSerializerOptions _options =

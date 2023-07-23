@@ -7,9 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Test_Vector.Factory;
-using Test_Vector.Helpers;
 using Test_Vector.Models;
-using Test_Vector.Parsers;
 
 namespace Test_Vector
 {
@@ -19,7 +17,6 @@ namespace Test_Vector
         private List<DrawShape> shapes;
         private WindowsFormDetail windowsFormDetail;
         private DrawShape selectedShape;
-        private Graphics graphicObj;
 
         public MainForm()
         {
@@ -40,8 +37,6 @@ namespace Test_Vector
                 FloatingHeight = this.Height,
                 FloatingWidth = this.Width,
             };
-
-            graphicObj = pictureBox1.CreateGraphics();
         }
 
         private void LoadDataFromDataSource()
@@ -77,7 +72,7 @@ namespace Test_Vector
             try
             {
                 selectedShape = (DrawShape)comboBox1.SelectedItem;
-                if (windowsFormDetail != null && graphicObj != null)
+                if (windowsFormDetail != null && graphics != null)
                 {
                     DrawShape(selectedShape, graphics, windowsFormDetail);
                 }
